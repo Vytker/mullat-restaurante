@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+html{
+    margin: 0;
+    padding: 0;
+    font-family: raleway, Verdana, Geneva, Tahoma, sans-serif;
+    
+}
