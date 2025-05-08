@@ -10,6 +10,8 @@
 		compact = window.scrollY > 50;           // umbral
 	}
 	$: isHome = $page.url.pathname === '/';
+	$: isReservas = $page.url.pathname === '/reservas';
+	$: isContacto = $page.url.pathname === '/contacto';
 
 	let mobileMenuOpen = false;
   function toggleMenu() {
@@ -125,8 +127,8 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="/carta" class="text-teal-600 text-lg font-medium">
-			  <i class="fa-solid fa-utensils mr-2"></i>Carta
+			<a href="/menu" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-utensils mr-2"></i>Menú
 			</a>
 		  </li>
 		  <li>
@@ -145,8 +147,65 @@
 {/if}
 
 	<main><slot /></main>
+	<footer class="relative w-full overflow-hidden -mt-1"
+	class:bg-white={isReservas || isContacto}
+	class:bg-[#f5f5f5]={!(isReservas || isContacto)}>
+  
+	<!-- Ola SVG superior -->
+	<div class="w-full h-36">
+	  <svg
+		viewBox="0 0 1440 320"
+		class="w-full h-full"
+		preserveAspectRatio="none"
+		xmlns="http://www.w3.org/2000/svg"
+	  >
+		<defs>
+		  <linearGradient id="footerGradient" x1="0" x2="0" y1="0" y2="1">
+			<stop offset="0%" stop-color="#007777" />
+			<stop offset="100%" stop-color={isReservas || isContacto ? '#ffffff' : '#f5f5f5'} />
+		  </linearGradient>
+		</defs>
+		<path
+		  fill="url(#footerGradient)"
+		  d="M0,64L48,80C96,96,192,128,288,170.7C384,213,480,267,576,261.3C672,256,768,192,864,149.3C960,107,1056,85,1152,112C1248,139,1344,213,1392,250.7L1440,288L1440,320L0,320Z"
+		/>
+	  </svg>
+	</div>
+  
+	<!-- Contenido del footer -->
+	<div class="relative z-10 px-4 py-10 text-center flex justify-center text-sm text-gray-800 font-medium space-y-4">
+	  
+  
+	  <!-- Elementos típicos de un footer -->
+	  <div class="flex flex-col md:flex-row justify-arrown items-center gap-6 text-gray-600 text-sm">
+		<div class="gap-4 flex flex-col md:flex-row items-center">
+			<a href="/contacto" class="hover:underline">Contacto</a>
+			<a href="/politica-privacidad" class="hover:underline">Política de privacidad</a>
+			<a href="/aviso-legal" class="hover:underline">Aviso legal</a>
+			<a href="/cookies" class="hover:underline">Política de cookies</a>
+			
+		</div>
+		
+		<div class="flex justify-center space-x-4 text-lg mt-2">
+			<a href="https://instagram.com" target="_blank" aria-label="Instagram" class="hover:text-pink-600">
+			<i class="fab fa-instagram"></i>
+			</a>
+			<a href="https://facebook.com" target="_blank" aria-label="Facebook" class="hover:text-blue-600">
+			<i class="fab fa-facebook"></i>
+			</a>
+	  	</div>
 
-	<footer><p>&copy; 2025 Mullat Restaurante. Todos los derechos reservados.</p></footer>
+			<p>&copy; 2025 Mullat Restaurante. Todos los derechos reservados.</p>
+
+	  </div>
+  
+	  <!-- Redes sociales -->
+	  
+	</div>
+  </footer>
+  
+	  
+	  
 </div>
 
 <style>
@@ -154,7 +213,7 @@
 .layout{display:flex;flex-direction:column;min-height:100vh}
 header{flex-shrink:0}
 main{flex-grow:1;background:#f3f3f3}
-footer{flex-shrink:0;text-align:center;padding:1rem}
+footer{flex-shrink:0;text-align:center;}
 
 /* --- NAV estado inicial (pegado arriba) --- */
 .nav{

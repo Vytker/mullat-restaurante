@@ -13,10 +13,7 @@ p {
   margin-block: 1lh;
 }
 
-:root {
-    /* factor de escala = ancho de viewport / 1440px (ancho de tu diseño) */
-    --header-scale: calc(100vw / 1440);
-  }
+
   
   .scale-wrapper {
     width: 1440px;                /* fijo, ancho de diseño */
