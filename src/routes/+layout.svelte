@@ -118,6 +118,8 @@
       <li><a href="/reservas" class="text-teal-600 text-lg font-medium">Reservas</a></li>
       <li><a href="/menu"     class="text-teal-600 text-lg font-medium">Menú</a></li>
       <li><a href="/contacto"class="text-teal-600 text-lg font-medium">Contacto</a></li>
+      <li><a href="/conocenos"class="text-teal-600 text-lg font-medium">Conócenos</a></li>
+
     </ul>
   </div>
 {/if}
