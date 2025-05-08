@@ -9,7 +9,9 @@ html{
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
-
+p {
+  margin-block: 1lh;
+}
 
 :root {
     /* factor de escala = ancho de viewport / 1440px (ancho de tu diseño) */

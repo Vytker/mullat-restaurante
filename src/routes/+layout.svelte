@@ -37,8 +37,8 @@
 				<ul class="nav-list">
 					<li class:hidden={isHome && !compact} class="inline-block text-black border-b border-black transition-all duration-300 hover:border-transparent"><a href="/">Inicio</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/reservas">Reservas</a></li>
-					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/reservas">Carta</a></li>
-					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/reservas">Contacto</a></li>
+					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/carta">Carta</a></li>
+					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/contacto">Contacto</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/conocenos">Conócenos</a></li>
 
 
@@ -125,8 +125,8 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="/menu" class="text-teal-600 text-lg font-medium">
-			  <i class="fa-solid fa-utensils mr-2"></i>Menú
+			<a href="/carta" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-utensils mr-2"></i>Carta
 			</a>
 		  </li>
 		  <li>
