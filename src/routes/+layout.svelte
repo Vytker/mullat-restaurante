@@ -39,6 +39,7 @@
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/reservas">Reservas</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/reservas">Carta</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/reservas">Contacto</a></li>
+					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/conocenos">Conócenos</a></li>
 
 
 				</ul>
@@ -52,7 +53,7 @@
 		
 		{#if isHome}
 		 <!-- Sin scroll: se muestra el nav completo con logo a la izquierda y toggle a la derecha -->
-		 <div class="fixed top-0 right-0 z-30 max-w-xl mx-auto px-4 py-3 flex items-end justify-end bg-[rgb(243,243,243)]/0  md:hidden">
+		 <div class="fixed top-0 right-0 z-30 max-w-xl mx-auto px-4 py-3 flex items-end justify-end bg-[rgb(243,243,243)]/0  sm:hidden">
 			<button on:click={toggleMenu} aria-label="Toggle menu">
 			  <svg class="w-8 h-8 text-[rgb(0,109,109)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -63,7 +64,7 @@
 		{#if !compact}
 		  <!-- Sin scroll: se muestra el nav completo con logo a la izquierda y toggle a la derecha -->
 		  <div class="sticky top-0 z-30 max-w-xl mx-auto px-4 py-3 flex items-center justify-between bg-[rgb(243,243,243)] shadow md:hidden">
-			<div class="nav-logo">
+			<div class="nav-logo-mobile left-0 -ml-8">
 			  <a href="/"><img src="/images/mullat_logo_black1.png" alt="Mullat restaurante" class="titulo_mullat relative"/></a>
 			</div>
 			<button on:click={toggleMenu} aria-label="Toggle menu">
@@ -105,16 +106,14 @@
 	aria-modal="true"
 	aria-label="Mobile menu"
   >
-    <button
-      class="mb-4"
-      on:click={toggleMenu}
-      aria-label="Cerrar menú"
-    >
-      <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-    <ul class="flex flex-col gap-4">
+  <div class="flex">
+	<button class="ml-auto mb-4" on:click={toggleMenu} aria-label="Cerrar menú">
+	  <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+	  </svg>
+	</button>
+  </div>
+    <ul class="flex flex-col gap-4 items-center">
       <li><a href="/"       class="text-teal-600 text-lg font-medium">Inicio</a></li>
       <li><a href="/reservas" class="text-teal-600 text-lg font-medium">Reservas</a></li>
       <li><a href="/menu"     class="text-teal-600 text-lg font-medium">Menú</a></li>
@@ -186,11 +185,13 @@ footer{flex-shrink:0;text-align:center;padding:1rem}
 }
 
 .nav-logo{
-	color:black;
-	 flex:0 0 auto;
-	 width: 25%;
+	
+	 width: 20%;
 	}
 
+.nav-logo-mobile{
+	width: 50%;
+   }
 /* lista centrada horizontalmente */
 .nav-list{
     position:absolute;                 /* sale del flujo */
