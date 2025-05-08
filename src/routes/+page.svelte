@@ -76,7 +76,7 @@
           </div>
           
           <div class="overflow-hidden">
-            <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 1430 320" preserveAspectRatio="none">
+            <svg class="absolute bottom-[-1px] left-0 w-full h-fit" viewBox="0 0 1430 320" preserveAspectRatio="none">
                 <path fill="#00000" d="M0,288L60,266.7C120,245,240,203,360,170.7C480,139,600,117,720,133.3C840,149,960,203,1080,218.7C1200,235,1320,213,1380,202.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
             </svg>
           </div>
@@ -95,7 +95,7 @@
   <!-- Opcional: Menú de navegación simplificado para móvil -->
   <!-- SVG de transición (onda) debajo del menú -->
   <div>
-    <svg class="w-fill h-40" viewBox="0 50 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-fill h-fill" viewBox="0 50 1440 320"  xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="mobileGradient" x1="0" x2="0" y1="0" y2="1">
           <stop offset="0%" stop-color="rgb(0,119,119)" />
