@@ -25,61 +25,63 @@
 
 <!-- Versión para escritorio y tablet: mantiene tu section original -->
 <section class="titulo hidden sm:block ">
-  <div class="w-full relative grid grid-cols-1 lg:grid-cols-2 gap-x-4">
-    <!-- Columna izquierda: títulos y, en tablet (md), el texto debajo, sin margen ni padding -->
-    <div id="titulo" class="flex flex-col md:items-center md:justify-center md:p-5 lg:p-1 lg:mb-[-30px] lg:items-start pl-4 select-none">   
-        <img src="/images/logo_mullat_black_mb.svg" alt="Mullat restaurante" class="titulo_mullat_tab relative text-center"/>
-    </div>
+  <div class="desktop-scale">
+        <div class="w-full relative grid grid-cols-1 lg:grid-cols-2 gap-x-4">
+          <!-- Columna izquierda: títulos y, en tablet (md), el texto debajo, sin margen ni padding -->
+          <div id="titulo" class="flex flex-col md:items-center md:justify-center md:p-5 lg:p-1 lg:mb-[-30px] lg:items-start pl-4 select-none">   
+              <img src="/images/logo_mullat_black_mb.svg" alt="Mullat restaurante" class="titulo_mullat_tab relative text-center"/>
+          </div>
 
-    <!-- Columna derecha: solo en lg se muestra el texto, alineado al bottom -->
-    <div class="hidden show-from-850 absolute bottom-0 right-0 md:items-center md:justify-center md:p-5 lg:p-1 text-center ">
-    <p class="contact-info flex items-center gap-4 text-lg m-0 p-0">
-      <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-none text-[rgb(0,119,119)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.66.93l1.12 1.68a2 2 0 01-.45 2.7l-1.17.98a11.042 11.042 0 005.52 5.52l.98-1.17a2 2 0 012.7-.45l1.68 1.12a2 2 0 01.93 1.66V19a2 2 0 01-2 2h-1C7.373 21 3 16.627 3 11V5z" />
-        </svg>
-      </a><span>123-456-7890</span>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg class="w-6 h-6 fill-current text-[rgb(0,119,119)]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9 0 63.6 51.3 114.9 114.9 114.9 63.6 0 114.9-51.3 114.9-114.9 0-63.6-51.3-114.9-114.9-114.9zm0 190.2c-41.7 0-75.3-33.6-75.3-75.3 0-41.7 33.6-75.3 75.3-75.3 41.7 0 75.3 33.6 75.3 75.3 0 41.7-33.6 75.3-75.3 75.3zm146.4-194.3c0 14.9-12 26.9-26.9 26.9-14.9 0-26.9-12-26.9-26.9 0-14.9 12-26.9 26.9-26.9 14.9 0 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.7-9.9-67.3-36.2-93.6C386.9 32 355.3 23.8 319.6 22c-35.8-1.8-143.2-1.8-179 0-35.7 1.7-67.3 9.9-93.6 36.2C32 106.1 23.8 137.7 22 173.4c-1.8 35.8-1.8 143.2 0 179 1.7 35.7 9.9 67.3 36.2 93.6 26.3 26.3 57.9 34.5 93.6 36.2 35.8 1.8 143.2 1.8 179 0 35.7-1.7 67.3-9.9 93.6-36.2 26.3-26.3 34.5-57.9 36.2-93.6 1.8-35.8 1.8-143.2 0-179zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99-9 132.3-9s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99 9 132.3s2.7 102.9-9 132.3z"/>
-        </svg>
-      </a><span>@mullatrestaurante</span>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg class="w-6 h-6 fill-current text-[rgb(0,119,119)]" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-          <path d="M279.14 288l14.22-92.66H168.5v-60.63c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S241.91 0 208.36 0c-73 0-121.09 44.38-121.09 124.72V195.3H22.89V288h64.38v224h100.2V288z"/>
-        </svg>
-      </a><span>_mullatrestaurante</span>
-    </p>
-    
-  </div>
+          <!-- Columna derecha: solo en lg se muestra el texto, alineado al bottom -->
+          <div class="hidden show-from-850 absolute bottom-0 right-0 md:items-center md:justify-center md:p-5 lg:p-1 text-center ">
+          <p class="contact-info flex items-center gap-4 text-lg m-0 p-0">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-none text-[rgb(0,119,119)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.66.93l1.12 1.68a2 2 0 01-.45 2.7l-1.17.98a11.042 11.042 0 005.52 5.52l.98-1.17a2 2 0 012.7-.45l1.68 1.12a2 2 0 01.93 1.66V19a2 2 0 01-2 2h-1C7.373 21 3 16.627 3 11V5z" />
+              </svg>
+            </a><span>123-456-7890</span>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg class="w-6 h-6 fill-current text-[rgb(0,119,119)]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9 0 63.6 51.3 114.9 114.9 114.9 63.6 0 114.9-51.3 114.9-114.9 0-63.6-51.3-114.9-114.9-114.9zm0 190.2c-41.7 0-75.3-33.6-75.3-75.3 0-41.7 33.6-75.3 75.3-75.3 41.7 0 75.3 33.6 75.3 75.3 0 41.7-33.6 75.3-75.3 75.3zm146.4-194.3c0 14.9-12 26.9-26.9 26.9-14.9 0-26.9-12-26.9-26.9 0-14.9 12-26.9 26.9-26.9 14.9 0 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.7-9.9-67.3-36.2-93.6C386.9 32 355.3 23.8 319.6 22c-35.8-1.8-143.2-1.8-179 0-35.7 1.7-67.3 9.9-93.6 36.2C32 106.1 23.8 137.7 22 173.4c-1.8 35.8-1.8 143.2 0 179 1.7 35.7 9.9 67.3 36.2 93.6 26.3 26.3 57.9 34.5 93.6 36.2 35.8 1.8 143.2 1.8 179 0 35.7-1.7 67.3-9.9 93.6-36.2 26.3-26.3 34.5-57.9 36.2-93.6 1.8-35.8 1.8-143.2 0-179zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5 29.4-11.7 99-9 132.3-9s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99 9 132.3s2.7 102.9-9 132.3z"/>
+              </svg>
+            </a><span>@mullatrestaurante</span>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg class="w-6 h-6 fill-current text-[rgb(0,119,119)]" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M279.14 288l14.22-92.66H168.5v-60.63c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S241.91 0 208.36 0c-73 0-121.09 44.38-121.09 124.72V195.3H22.89V288h64.38v224h100.2V288z"/>
+              </svg>
+            </a><span>_mullatrestaurante</span>
+          </p>
+          
         </div>
-  <div id="espacio-svg-titulo"></div>
-  <!-- Resto del contenido que ya tienes en web -->
-  <div class="relative">
-    <!-- Botones y SVG de navegación -->
-    <div class="botones-nav-inicio relative z-10 -translate-y-5">
-    
-      <div class="flex items-center justify-center gap-6 -translate-y-[-20px]">
-        <a href="/reservas" class="inline-block text-white transition-all duration-300 hover:text-[rgb(0,119,119)] text-lg">
-          Reservar
-        </a>
-        <p class="text-white text-lg">|</p>
-        <a href="/menu" class="inline-block text-white transition-all duration-300 hover:text-[rgb(0,119,119)] text-lg">
-          Ver Carta
-        </a>
-        <p class="text-white text-lg">|</p>
-        <a href="/contacto" class="inline-block text-white transition-all duration-300 hover:text-[rgb(0,119,119)] text-lg">
-          Contacto
-        </a>
-      </div>
-    </div>
-    
-    <div class="overflow-hidden">
-      <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 1430 320" preserveAspectRatio="none">
-          <path fill="#00000" d="M0,288L60,266.7C120,245,240,203,360,170.7C480,139,600,117,720,133.3C840,149,960,203,1080,218.7C1200,235,1320,213,1380,202.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-      </svg>
-    </div>
-  </div>
+              </div>
+        <div id="espacio-svg-titulo"></div>
+        <!-- Resto del contenido que ya tienes en web -->
+        <div class="relative">
+          <!-- Botones y SVG de navegación -->
+          <div class="botones-nav-inicio relative z-10 -translate-y-5">
+          
+            <div class="flex items-center justify-center gap-6 -translate-y-[-20px]">
+              <a href="/reservas" class="inline-block text-white transition-all duration-300 hover:text-[rgb(0,119,119)] text-lg">
+                Reservar
+              </a>
+              <p class="text-white text-lg">|</p>
+              <a href="/menu" class="inline-block text-white transition-all duration-300 hover:text-[rgb(0,119,119)] text-lg">
+                Ver Carta
+              </a>
+              <p class="text-white text-lg">|</p>
+              <a href="/contacto" class="inline-block text-white transition-all duration-300 hover:text-[rgb(0,119,119)] text-lg">
+                Contacto
+              </a>
+            </div>
+          </div>
+          
+          <div class="overflow-hidden">
+            <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 1430 320" preserveAspectRatio="none">
+                <path fill="#00000" d="M0,288L60,266.7C120,245,240,203,360,170.7C480,139,600,117,720,133.3C840,149,960,203,1080,218.7C1200,235,1320,213,1380,202.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+          </div>
+        </div>
+</div>
 </section>
 
 <!-- Versión para móvil: se muestra solo en pantallas pequeñas -->
@@ -250,6 +252,17 @@
         height: 0px; /* Ajusta la altura según sea necesario */
     }
   }
+
+  /* Solo afecta a resoluciones de ordenador (a partir de 1440px) */
+@media (min-width: 1920px) {
+  .desktop-scale {
+    /* Fijamos el ancho base a 1440px y escalamos en función del viewport */
+    width: 1440px;
+    margin: 0 auto; 
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top center;
+  }
+}
 
     .botones-nav-inicio {
         margin-top: 20px;
