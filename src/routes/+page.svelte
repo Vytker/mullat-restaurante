@@ -34,27 +34,7 @@
       </div>
       
       <!-- Redes y contacto: solo se muestran en resoluciones lg y superiores -->
-      <div class="lg:flex flex-col sm:flex-row justify-end items-center gap-y-2 gap-x-6 text-sm text-[rgb(0,119,119)]">
-        <div class=" flex items-center gap-1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.66.93l1.12 1.68a2 2 0 01-.45 2.7l-1.17.98a11.042 11.042 0 005.52 5.52l.98-1.17a2 2 0 012.7-.45l1.68 1.12a2 2 0 01.93 1.66V19a2 2 0 01-2 2h-1C7.373 21 3 16.627 3 11V5z" />
-          </svg>
-          <span>123-456-7890</span>
-        </div>
-        <div class="flex items-center gap-1">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-            <path d="M279.14 288l14.22-92.66H168.5v-60.63c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S241.91 0 208.36 0c-73 0-121.09 44.38-121.09 124.72V195.3H22.89V288h64.38v224h100.2V288z" />
-          </svg>
-          <span>@mullatrestaurante</span>
-        </div>
-        <div class="flex items-center gap-1">
-          <svg class="w-5 h-5 fill-current" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
-            <path d="M..." />
-          </svg>
-          <span>_mullatrestaurante</span>
-        </div>
-      </div>
-    </div>
+      
 
     <!-- Contenedor del SVG con navegación -->
     <div class="relative w-full overflow-hidden -mt-4 sm:-mt-30">
