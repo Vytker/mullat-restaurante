@@ -114,11 +114,31 @@
 	</button>
   </div>
     <ul class="flex flex-col gap-4 items-center">
-      <li><a href="/"       class="text-teal-600 text-lg font-medium">Inicio</a></li>
-      <li><a href="/reservas" class="text-teal-600 text-lg font-medium">Reservas</a></li>
-      <li><a href="/menu"     class="text-teal-600 text-lg font-medium">Menú</a></li>
-      <li><a href="/contacto"class="text-teal-600 text-lg font-medium">Contacto</a></li>
-      <li><a href="/conocenos"class="text-teal-600 text-lg font-medium">Conócenos</a></li>
+		<li>
+			<a href="/" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-house mr-2"></i>Inicio
+			</a>
+		  </li>
+		  <li>
+			<a href="/reservas" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-calendar-alt mr-2"></i>Reservas
+			</a>
+		  </li>
+		  <li>
+			<a href="/menu" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-utensils mr-2"></i>Menú
+			</a>
+		  </li>
+		  <li>
+			<a href="/contacto" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-envelope mr-2"></i>Contacto
+			</a>
+		  </li>
+		  <li>
+			<a href="/conocenos" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-info-circle mr-2"></i>Conócenos
+			</a>
+		  </li>
 
     </ul>
   </div>
