@@ -25,34 +25,41 @@
     ];
 </script>
 
-<section class="max-w-7xl mx-auto px-4 py-16">
+<section class="max-w-7xl mx-auto px-4 py-16 bg-gradient-to-r from-[rgb(245,245,245)] to-[rgb(235,235,235)]">
     <!-- Encabezado Zona Infantil -->
     <div class="text-center mb-8">
         <h1 class="text-4xl md:text-5xl font-extrabold text-[rgb(0,119,119)]">Zona Infantil</h1>
-        <p class="text-xl text-gray-600 mt-4">
+        <p class="text-xl text-gray-700 mt-4 hidden md:block">
             Un espacio pensado para disfrutar y divertirse. Nuestro parque infantil está especialmente diseñado para el entretenimiento y la seguridad de los más pequeños, ofreciendo áreas de juego y actividades para estimular su creatividad.
+        </p>
+        <p class="text-lg text-gray-700 mt-4 md:hidden">
+            Un espacio para disfrutar y divertirse, diseñado para los más pequeños.
         </p>
     </div>
 
     <!-- Imagen y Texto del Parque Infantil -->
     <div class="flex flex-col md:flex-row items-center mb-12 gap-8">
         <div class="flex-shrink-0">
-            <img src="/images/parque_rafol.webp" alt="Parque Infantil" class="w-full md:w-96 h-auto rounded-lg shadow-md object-cover" />
+            <img src="/images/parque_rafol.webp" alt="Parque Infantil" class="w-full md:w-96 h-auto rounded-lg shadow-md object-cover border-2 border-[rgb(0,119,119)]" />
         </div>
         <div>
             <h2 class="text-3xl font-bold text-[rgb(0,119,119)] mb-4">Nuestro Parque Infantil</h2>
-            <p class="text-gray-700">
+            <p class="text-gray-700 hidden md:block">
                 Nuestro parque infantil está diseñado para garantizar la diversión y seguridad de los más pequeños. Contamos con áreas de juego adaptadas para estimular su creatividad y proporcionarles momentos inolvidables.
+            </p>
+            <p class="text-gray-700 md:hidden">
+                Diversión y seguridad para los más pequeños en nuestro parque infantil.
             </p>
         </div>
     </div>
+
 
     <!-- Opciones de Cumpleaños -->
     <div>
         <h2 class="text-3xl font-bold text-[rgb(0,119,119)] mb-4">Cumpleaños</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {#each opcionesCumpleanos as option}
-                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                <div class="p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <h3 class="text-xl font-semibold text-[rgb(0,119,119)]">{option.title}</h3>
                     <p class="text-gray-700 mt-2">{@html option.description}</p>
                     <p class="text-gray-600 mt-1 font-bold">{@html option.price}</p>

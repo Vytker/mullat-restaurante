@@ -8,12 +8,12 @@
     },
     {
       title: 'Piscina',
-      href: '/eventos/piscina',
+      href: '/eventos/deportes/piscina',
       img: '/images/piscina.jpg'
     },
     {
       title: 'Tenis & Pádel',
-      href: '/eventos/deportes',
+      href: '/eventos/deportes/padel-tenis',
       img: '/images/padel.jpg'
     }
   ];

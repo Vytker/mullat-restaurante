@@ -22,7 +22,7 @@
 
 	
 	function handleScroll() {
-		compact = window.scrollY > (isHome ? 300 : 5);           // umbral
+		compact = window.scrollY > (isHome ? 300 : 20);           // umbral
 	}
 	function handleScrollMobile() {
 		compact = window.scrollY > 50;           // umbral
