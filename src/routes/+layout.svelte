@@ -134,7 +134,7 @@
 	  </svg>
 	</button>
   </div>
-  
+
     <ul class="flex flex-col gap-4 items-start">
 		<li>
 			<a href="/" class="text-teal-600 text-lg font-medium">
@@ -171,11 +171,9 @@
       {#if showEventos}
         <div class="mt-4 border-t border-gray-300 pt-4">
           <ul class="flex flex-col gap-2">
-            <li><a href="/zona-infantil" class="text-teal-600 hover:underline transition">Zona Infantil</a></li>
-            <li><a href="/deportes/padel" class="text-teal-600 hover:underline transition">Pádel</a></li>
-            <li><a href="/deportes/piscina" class="text-teal-600 hover:underline transition">Piscina</a></li>
-            <li><a href="/deportes/tenis" class="text-teal-600 hover:underline transition">Tenis</a></li>
-            <li><a href="/deportes/dardos" class="text-teal-600 hover:underline transition">Dardos</a></li>
+            <li><a href="/eventos/zona-infantil" class="text-teal-600 hover:underline transition">Cumpleaños / Zona Infantil</a></li>
+            <li><a href="/eventos/deportes/padel-tenis" class="text-teal-600 hover:underline transition">Pádel / Tenis</a></li>
+            <li><a href="/eventos/deportes/piscina" class="text-teal-600 hover:underline transition">Piscina</a></li>
           </ul>
         </div>
       {/if}
