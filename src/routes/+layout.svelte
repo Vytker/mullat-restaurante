@@ -73,7 +73,7 @@
 			<div class="nav-logo-mobile left-0 -ml-8">
 			  <a href="/"><img src="/images/mullat_logo_black1.png" alt="Mullat restaurante" class="titulo_mullat relative"/></a>
 			</div>
-			<button on:click={toggleMenu} aria-label="Toggle menu">
+			<button on:click={toggleMenu} aria-label="Toggle menu" class:hidden={mobileMenuOpen}>
 			  <svg class="w-8 h-8 text-[rgb(0,109,109)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 			  </svg>
@@ -82,7 +82,7 @@
 		{:else}
 		  <!-- Con scroll: se muestra solo el toggle -->
 		  <div class="fixed top-0 right-0 z-30 max-w-xl mx-auto px-4 py-3 flex items-end justify-end bg-[rgb(243,243,243)]/0  md:hidden">
-			<button on:click={toggleMenu} aria-label="Toggle menu">
+			<button on:click={toggleMenu} aria-label="Toggle menu" class:hidden={mobileMenuOpen}>
 			  <svg class="w-8 h-8 text-[rgb(0,109,109)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 			  </svg>
@@ -119,7 +119,7 @@
 	  </svg>
 	</button>
   </div>
-    <ul class="flex flex-col gap-4 items-center">
+    <ul class="flex flex-col gap-4 items-start">
 		<li>
 			<a href="/" class="text-teal-600 text-lg font-medium">
 			  <i class="fa-solid fa-house mr-2"></i>Inicio
@@ -159,7 +159,7 @@
 	class:bg-[#f5f5f5]={!(isReservas || isContacto)}>
   
 	<!-- Ola SVG superior -->
-	<div class="w-full h-24 sm:h-36">
+	<div class="w-full h-20 sm:h-36">
 	  <svg
   viewBox="0 0 1440 320"
   class="w-full h-full rotate-180 scale-x-[-1] sm:rotate-0 sm:scale-x-100"
@@ -180,17 +180,16 @@
 	</div>
   
 	<!-- Contenido del footer -->
-	<div class="relative z-10 px-4  lg:py-10 text-center flex justify-center text-sm text-gray-800 font-medium space-y-4">
+	<div class="relative z-10 px-4 -py-5 -my-7  lg:py-10 text-center flex justify-center text-sm text-gray-800 font-medium space-y-4">
 	  
   
 	  <!-- Elementos típicos de un footer -->
-	  <div class="flex flex-col md:flex-row justify-arrown items-center gap-6 text-gray-600 text-sm">
-		<div class="gap-1  md:gap-4 flex flex-col md:flex-row items-center">
+	  <div class="flex flex-col md:flex-row justify-around items-center lg:gap-6 text-gray-600 text-sm pt-5 lg:pt-0">
+		<div class="gap-3 md:gap-4 flex md:flex-row items-center">
 			<a href="/contacto" class="hover:underline">Contacto</a>
 			<a href="/politica-privacidad" class="hover:underline">Política de privacidad</a>
 			<a href="/aviso-legal" class="hover:underline">Aviso legal</a>
-			<a href="/cookies" class="hover:underline">Política de cookies</a>
-			
+
 		</div>
 		
 		<div class="flex justify-center space-x-4 text-lg mt-2">
@@ -202,7 +201,7 @@
 			</a>
 	  	</div>
 
-			<p>&copy; 2025 Mullat Restaurante. Todos los derechos reservados.</p>
+			<p class="pb-3 lg:pb-0">&copy; 2025 Mullat Restaurante. Todos los derechos reservados.</p>
 
 	  </div>
 
