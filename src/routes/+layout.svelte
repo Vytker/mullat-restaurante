@@ -131,8 +131,8 @@
 			</a>
 		  </li>
 		  <li>
-			<a href="/menu" class="text-teal-600 text-lg font-medium">
-			  <i class="fa-solid fa-utensils mr-2"></i>Menú
+			<a href="/carta" class="text-teal-600 text-lg font-medium">
+			  <i class="fa-solid fa-utensils mr-2"></i>Carta
 			</a>
 		  </li>
 		  <li>
