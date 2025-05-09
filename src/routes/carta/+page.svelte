@@ -26,57 +26,173 @@
     <!-- Contenido según la pestaña activa -->
     {#if activeTab === 'Carta principal'}
       <section id="carta-principal" class="w-full px-5 py-10 md:py-16 bg-gray-100 text-gray-800">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">Carta Principal</h2>
-    <p class="mb-8 text-lg">Disponemos de una variada carta de opciones deliciosas y nutritivas, además de un estudiado menú diario para satisfacer a los más exigentes.</p>
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Entrantes y Tapas</h3>
-    <div class="space-y-2">
-      <div class="flex justify-between"><span>Croquetas de jamón ibérico <small>(media ración / ración)</small></span><span>6,40 € / 12,80 €</span></div>
-      <div class="flex justify-between"><span>Montadito de bacon y queso de cabra</span><span>5,00 € / 10,00 €</span></div>
-      <div class="flex justify-between"><span>Montadito de “figatells” (mini hamburguesa tradicional)</span><span>5,00 € / 10,00 €</span></div>
-      <div class="flex justify-between"><span>Montadito de lomo y huevo de codorniz</span><span>5,40 € / 10,40 €</span></div>
-      <div class="flex justify-between"><span>Montadito de tortilla de patatas</span><span>4,00 € / 8,00 €</span></div>
-      <div class="flex justify-between"><span>Sepia a la plancha</span><span>12,90 €</span></div>
-      <div class="flex justify-between"><span>“Escombros” (pescaditos fritos)</span><span>5,40 € / 9,90 €</span></div>
-      <div class="flex justify-between"><span>Calamares a la plancha</span><span>9,20 €</span></div>
-      <div class="flex justify-between"><span>Alitas de pollo fritas</span><span>4,00 € / 8,00 €</span></div>
-    </div>
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Ensaladas</h3>
-    <div class="space-y-2">
-      <div class="flex justify-between"><span>Ensalada de la casa <small>(lechuga, tomate, zanahoria, cebolla, atún, huevo duro, olivas)</small></span><span>7,50 €</span></div>
-      <div class="flex justify-between"><span>Ensalada César <small>(pollo a la plancha, picatostes, queso parmesano, salsa César)</small></span><span>8,50 €</span></div>
-      <div class="flex justify-between"><span>Ensalada mediterránea <small>(mix de lechugas, tomate, atún, cebolla, huevo, aceitunas)</small></span><span>7,50 €</span></div>
-    </div>
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Hamburguesas</h3>
-    <div class="space-y-2">
-      <div class="flex justify-between"><span>Burger Completa Especial <small>(ternera, cheddar, bacon, cebolla, tomate, lechuga, huevo)</small></span><span>9,00 €</span></div>
-      <div class="flex justify-between"><span>Burger BBQ <small>(ternera, cheddar, bacon, cebolla caramelizada, salsa BBQ)</small></span><span>9,00 €</span></div>
-      <div class="flex justify-between"><span>Burger Chef <small>(ternera, queso de cabra, cebolla caramelizada, mermelada dulce)</small></span><span>9,00 €</span></div>
-    </div>
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Bocadillos</h3>
-    <div class="space-y-2">
-      <div class="flex justify-between"><span>Bocadillo de jamón serrano y queso</span><span>7,00 €</span></div>
-      <div class="flex justify-between"><span>Bocadillo de lomo con queso</span><span>7,50 €</span></div>
-      <div class="flex justify-between"><span>Bocadillo de tortilla española</span><span>6,50 €</span></div>
-      <div class="flex justify-between"><span>Bocadillo vegetal <small>(atún, lechuga, tomate, huevo)</small></span><span>7,00 €</span></div>
-      <div class="flex justify-between"><span>Bocadillo “Chivito” <small>(lomo, queso, bacon, lechuga, tomate, huevo)</small></span><span>8,50 €</span></div>
-    </div>
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Postres Caseros</h3>
-    <div class="space-y-2 mb-4">
-      <div class="flex justify-between"><span>Rosas de hojaldre y manzana</span><span>5,50 €</span></div>
-      <div class="flex justify-between"><span>Tarta de queso casera</span><span>6,00 €</span></div>
-      <div class="flex justify-between"><span>Flan con nata</span><span>5,00 €</span></div>
-    </div>
-    <h3 class="text-2xl font-semibold mt-8 mb-4">Bebidas y Cócteles</h3>
-    <div class="space-y-2">
-      <div class="flex justify-between"><span>Refrescos y agua</span><span>2,00 €</span></div>
-      <div class="flex justify-between"><span>Cerveza (caña / jarra)</span><span>1,50 € / 3,00 €</span></div>
-      <div class="flex justify-between"><span>Copa de vino</span><span>2,00 €</span></div>
-      <div class="flex justify-between"><span>Café o infusión</span><span>1,20 €</span></div>
-      <div class="flex justify-between"><span>Mojito / Caipiriña</span><span>6,00 €</span></div>
-      <div class="flex justify-between"><span>Gin-tonic (combinado)</span><span>7,00 €</span></div>
-    </div>
-  </div>
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold mb-6 text-center">Carta Principal</h2>
+          <p class="mb-8 text-lg">Disponemos de una variada carta de opciones deliciosas y nutritivas, además de un estudiado menú diario para satisfacer a los más exigentes.</p>
+          <h3 class="text-2xl font-semibold mt-8 mb-4">Entrantes y Tapas</h3>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Croquetas de jamón ibérico <small>(media ración / ración)</small></span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">6,40 € / 12,80 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Montadito de bacon y queso de cabra</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">5,00 € / 10,00 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Montadito de “figatells” (mini hamburguesa tradicional)</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">5,00 € / 10,00 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Montadito de lomo y huevo de codorniz</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">5,40 € / 10,40 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Montadito de tortilla de patatas</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">4,00 € / 8,00 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Sepia a la plancha</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">12,90 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">“Escombros” (pescaditos fritos)</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">5,40 € / 9,90 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Calamares a la plancha</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">9,20 €</span>
+            </div>
+            <div class="flex items-center">
+              <span class="truncate sm:whitespace-nowrap">Alitas de pollo fritas</span>
+              <span class="flex-grow border-b border-gray-300 mx-2"></span>
+              <span class="whitespace-nowrap">4,00 € / 8,00 €</span>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold mt-8 mb-4">Ensaladas</h3>
+          <div class="space-y-2">
+            <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Ensalada de la casa <small>(lechuga, tomate, zanahoria, cebolla, atún, huevo duro, olivas)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">7,50 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Ensalada César <small>(pollo a la plancha, picatostes, queso parmesano, salsa César)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">8,50 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Ensalada mediterránea <small>(mix de lechugas, tomate, atún, cebolla, huevo, aceitunas)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">7,50 €</span>
+        </div>
+        </div>
+        <h3 class="text-2xl font-semibold mt-8 mb-4">Hamburguesas</h3>
+        <div class="space-y-2">
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Burger Completa Especial <small>(ternera, cheddar, bacon, cebolla, tomate, lechuga, huevo)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">9,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Burger BBQ <small>(ternera, cheddar, bacon, cebolla caramelizada, salsa BBQ)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">9,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Burger Chef <small>(ternera, queso de cabra, cebolla caramelizada, mermelada dulce)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">9,00 €</span>
+        </div>
+        </div>
+        <h3 class="text-2xl font-semibold mt-8 mb-4">Bocadillos</h3>
+        <div class="space-y-2">
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Bocadillo de jamón serrano y queso</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">7,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Bocadillo de lomo con queso</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">7,50 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Bocadillo de tortilla española</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">6,50 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Bocadillo vegetal <small>(atún, lechuga, tomate, huevo)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">7,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Bocadillo “Chivito” <small>(lomo, queso, bacon, lechuga, tomate, huevo)</small></span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">8,50 €</span>
+        </div>
+        </div>
+        <h3 class="text-2xl font-semibold mt-8 mb-4">Postres Caseros</h3>
+        <div class="space-y-2 mb-4">
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Rosas de hojaldre y manzana</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">5,50 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Tarta de queso casera</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">6,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Flan con nata</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">5,00 €</span>
+        </div>
+        </div>
+        <h3 class="text-2xl font-semibold mt-8 mb-4">Bebidas y Cócteles</h3>
+        <div class="space-y-2">
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Refrescos y agua</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">2,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Cerveza (caña / jarra)</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">1,50 € / 3,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Copa de vino</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">2,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Café o infusión</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">1,20 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Mojito / Caipiriña</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">6,00 €</span>
+        </div>
+        <div class="flex items-center">
+            <span class="whitespace-normal sm:whitespace-nowrap">Gin-tonic (combinado)</span>
+            <span class="flex-grow border-b border-gray-300 mx-2"></span>
+            <span class="whitespace-nowrap">7,00 €</span>
+        </div>
+        </div>
+
 </section>
     {:else if activeTab === 'Menú del día'}
       <section id="menu-del-dia">

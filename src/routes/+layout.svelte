@@ -1,11 +1,20 @@
 <script lang="ts">
 	import '../app.css';
+	import { onMount } from 'svelte';
+	
 	let compact = false;
     import { page } from '$app/stores';
+
+    let innerWidth = 0;
+    onMount(() => {
+      innerWidth = window.innerWidth;
+    });
 
 	$: isHome = $page.url.pathname === '/';
 	$: isReservas = $page.url.pathname === '/reservas';
 	$: isContacto = $page.url.pathname === '/contacto';
+	$: isCarta = $page.url.pathname === '/carta';
+
 
 	function handleScroll() {
 		compact = window.scrollY > (isHome ? 300 : 5);           // umbral
@@ -168,8 +177,9 @@
 >
   <defs>
     <linearGradient id="footerGradient" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#007777" />
-      <stop offset="100%" stop-color={isReservas || isContacto ? '#ffffff' : '#f5f5f5'} />
+      <stop offset="0%" stop-color={innerWidth < 768 ? "#808080" : "#007777"} />
+        <stop offset="100%" stop-color={innerWidth < 768 ? "#000" : (isReservas || isContacto ? "#ffffff" : "#f5f5f5")} />
+      
     </linearGradient>
   </defs>
   <path
