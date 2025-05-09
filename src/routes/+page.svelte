@@ -112,11 +112,11 @@
       <!-- Versión para escritorio y tablet -->
 <div class="hidden md:block md:w-1/2" in:slide={{ duration: 600 }}>
   <h2 class="text-center md:text-right text-3xl font-bold mb-4">
-    Desde la fuente<br />
-    hasta tu mesa
+    Ven y descubre<br />
+    nuestra carta
   </h2>
   <p class="text-center md:text-right text-lg mb-6">
-    En nuestro compromiso con la excelencia, seleccionamos ingredientes de origen único, garantizando la frescura y calidad que distinguen a nuestra cocina. Cada plato es una creación que combina tradición y modernidad, diseñada para sorprender y deleitar.
+    Explora una selección de platos únicos, preparados con pasión y los mejores ingredientes para sorprender tu paladar.
   </p>
   <div class="text-center md:text-right">
     <a href="/carta" class="inline-block px-6 py-3 bg-[rgb(0,119,119)] text-white font-medium rounded hover:bg-[rgb(100,199,199)] transition">
@@ -282,7 +282,7 @@
     </p>
     <div class="text-center mt-8">
       <a
-        href="/restaurante/"
+        href="/conocenos"
         class="inline-block px-6 py-3 bg-[rgb(255,255,255)] text-[rgb(0,109,109)] border border-[rgb(0,109,109)] font-medium rounded hover:bg-[rgb(0,109,109)] hover:text-white transition"
         >CONÓCENOS</a
       >

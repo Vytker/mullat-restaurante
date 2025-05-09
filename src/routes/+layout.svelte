@@ -62,6 +62,7 @@
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/carta">Carta</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/contacto">Contacto</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/conocenos">Conócenos</a></li>
+					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/eventos">Eventos</a></li>
 				
 				</ul>
 
@@ -316,6 +317,8 @@ footer{flex-shrink:0;text-align:center;}
     left:50%; transform:translateX(-50%);  /* la centramos */
     display:flex; gap:1.25rem;
     margin:0; padding:0; list-style:none;
+	font-size: small;
+	margin-left: -2rem;
 }
 
 .nav.compact .nav-list{
@@ -328,6 +331,7 @@ footer{flex-shrink:0;text-align:center;}
 .nav-tlf{
 	flex:0 0 auto;
 	margin-left:auto;                  /* empuja a la derecha */
+	
 	font-size:1em;
 	background-color:rgb(0, 119, 119);
 	color: white;
