@@ -1,21 +1,26 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	
-	let compact = false;
-    import { page } from '$app/stores';
+	import { slide } from 'svelte/transition';
+	import { page } from '$app/stores';
 
-    let innerWidth = 0;
-    onMount(() => {
-      innerWidth = window.innerWidth;
-    });
+
+	let compact = false;
+	let showEventos = false;
+	let mobileMenuOpen = false;
+	let innerWidth = 0;
+
 
 	$: isHome = $page.url.pathname === '/';
 	$: isReservas = $page.url.pathname === '/reservas';
 	$: isContacto = $page.url.pathname === '/contacto';
 	$: isCarta = $page.url.pathname === '/carta';
 
+    onMount(() => {
+      innerWidth = window.innerWidth;
+    });
 
+	
 	function handleScroll() {
 		compact = window.scrollY > (isHome ? 300 : 5);           // umbral
 	}
@@ -23,8 +28,10 @@
 		compact = window.scrollY > 50;           // umbral
 	}
 	
+  function toggleEventos() {
+    showEventos = !showEventos;
+  }
 
-	let mobileMenuOpen = false;
   function toggleMenu() {
     mobileMenuOpen = !mobileMenuOpen;
   }
@@ -55,8 +62,7 @@
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/carta">Carta</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/contacto">Contacto</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/conocenos">Conócenos</a></li>
-
-
+				
 				</ul>
 
 				<div class="nav-tlf">
@@ -128,6 +134,7 @@
 	  </svg>
 	</button>
   </div>
+  
     <ul class="flex flex-col gap-4 items-start">
 		<li>
 			<a href="/" class="text-teal-600 text-lg font-medium">
@@ -154,10 +161,27 @@
 			  <i class="fa-solid fa-info-circle mr-2"></i>Conócenos
 			</a>
 		  </li>
-
-    </ul>
+  <!-- En el móvil también se incluye la opción de Eventos -->
+        <li>
+          <button on:click={toggleEventos} class="flex items-center text-teal-600 text-lg font-medium focus:outline-none">
+            <i class="fa-solid fa-calendar-plus mr-2"></i>Eventos
+          </button>
+        </li>
+      </ul>
+      {#if showEventos}
+        <div class="mt-4 border-t border-gray-300 pt-4">
+          <ul class="flex flex-col gap-2">
+            <li><a href="/zona-infantil" class="text-teal-600 hover:underline transition">Zona Infantil</a></li>
+            <li><a href="/deportes/padel" class="text-teal-600 hover:underline transition">Pádel</a></li>
+            <li><a href="/deportes/piscina" class="text-teal-600 hover:underline transition">Piscina</a></li>
+            <li><a href="/deportes/tenis" class="text-teal-600 hover:underline transition">Tenis</a></li>
+            <li><a href="/deportes/dardos" class="text-teal-600 hover:underline transition">Dardos</a></li>
+          </ul>
+        </div>
+      {/if}
   </div>
 {/if}
+
 
 	<main><slot /></main>
 

@@ -2,6 +2,24 @@
  import { onMount } from 'svelte';
  import { fade, slide } from 'svelte/transition';
 
+   let items = [
+    {
+      title: 'Cumpleaños',
+      href: '/eventos/zona-infantil',
+      img: '/images/parque_rafol.webp'
+    },
+    {
+      title: 'Piscina',
+      href: '/eventos/piscina',
+      img: '/images/piscina.jpg'
+    },
+    {
+      title: 'Tenis & Pádel',
+      href: '/eventos/deportes',
+      img: '/images/padel.jpg'
+    }
+  ];
+
  let images = [
     '/images/img1.jpg',
     '/images/img2.jpg',
@@ -31,6 +49,7 @@
       <!-- Logo centrado y de mayor tamaño -->
       <div class="select-none mb-2">
         <img src="/images/logo_mullat_black_mb.svg" alt="Mullat restaurante" class="titulo_mullat_tab w-64" />
+        </div>
       </div>
       
       <!-- Redes y contacto: solo se muestran en resoluciones lg y superiores -->
@@ -52,6 +71,8 @@
           <li><a href="/contacto" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Contacto</a></li>
           <li class="select-none">|</li>
           <li><a href="/conocenos" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Conócenos</a></li>
+          <li class="select-none">|</li>
+          <li><a href="/#eventos_especiales" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Eventos</a></li>
         </ul>
       </nav>
     </div>
@@ -87,23 +108,38 @@
 <section class="max-w-7xl mx-auto px-4 py-16">
     <div class="flex flex-col md:flex-row items-center gap-8">
       <!-- Texto -->
-      <div class="md:w-1/2" in:slide={{ duration: 600 }}>
-        <h2 class="text-center md:text-right text-3xl font-bold mb-4">
-          Recogemos el producto<br />
-          <span class="block">desde su lugar de origen</span>
-        </h2>
-        <p class="text-center md:text-right text-lg mb-6">
-          Seleccionamos, cuidamos y tratamos con máxima profesionalidad nuestra materia prima, dando a cada uno de
-          nuestros platos la importancia que se merece.
-        </p>
-        <div class="text-center md:text-right">
-          <a
-            href="/carta"
-            class="inline-block px-6 py-3 bg-[rgb(0,119,119)] text-white font-medium rounded hover:bg-[rgb(100,199,199)] transition"
-            >VER CARTA</a
-          >
-        </div>
-      </div>
+      <!-- Versión para escritorio y tablet -->
+      <!-- Versión para escritorio y tablet -->
+<div class="hidden md:block md:w-1/2" in:slide={{ duration: 600 }}>
+  <h2 class="text-center md:text-right text-3xl font-bold mb-4">
+    Desde la fuente<br />
+    hasta tu mesa
+  </h2>
+  <p class="text-center md:text-right text-lg mb-6">
+    En nuestro compromiso con la excelencia, seleccionamos ingredientes de origen único, garantizando la frescura y calidad que distinguen a nuestra cocina. Cada plato es una creación que combina tradición y modernidad, diseñada para sorprender y deleitar.
+  </p>
+  <div class="text-center md:text-right">
+    <a href="/carta" class="inline-block px-6 py-3 bg-[rgb(0,119,119)] text-white font-medium rounded hover:bg-[rgb(100,199,199)] transition">
+      DESCUBRE NUESTRA CARTA
+    </a>
+  </div>
+</div>
+
+<!-- Versión para móvil -->
+<div class="block md:hidden md:w-1/2 text-left" in:slide={{ duration: 600 }}>
+  <h2 class="text-left text-xl font-bold mb-2">
+    Ingredientes selectos<br />
+    para paladares exigentes
+  </h2>
+  <p class="text-left text-sm mb-4">
+    Escogemos lo mejor de cada origen para ofrecerte una experiencia culinaria inigualable, donde cada bocado cuenta.
+  </p>
+  <div class="text-center sm:text-right">
+    <a href="/carta" class="inline-block px-4 py-2 bg-[rgb(0,119,119)] text-white font-medium rounded hover:bg-[rgb(100,199,199)] transition">
+      CONOCE NUESTRA CARTA
+    </a>
+  </div>
+</div>
   
       <!-- Slider adicional (opcional) -->
       <div class="md:w-1/2" in:slide={{ duration: 600, delay: 200 }}>
@@ -111,77 +147,129 @@
       </div>
     </div>
   </section>
-  <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="bg-[rgb(0,119,119)] rounded-lg p-8 text-center shadow-lg">
-      <h2 class="text-3xl font-bold text-white mb-4">¡Haz tu reserva!</h2>
-      <p class="text-white text-lg mb-6">
-        Asegura tu lugar en nuestro exclusivo oasis. Disfruta de un ambiente fresco, cócteles artesanales y la mejor 
-        experiencia gastronómica a la orilla de la piscina. ¡Tu momento ideal te espera!
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="bg-[rgb(0,119,119)] rounded-lg p-6 text-center shadow-md">
+      <h2 class="text-2xl font-semibold text-white mb-3">Reserva tu mesa</h2>
+      <p class="text-white text-base mb-4">
+        Vive una experiencia única con nosotros. Reserva ahora y disfruta de momentos inolvidables.
       </p>
-      <a href="/reservas" class="inline-block px-8 py-3 bg-white text-[rgb(0,119,119)] font-semibold rounded hover:bg-gray-200 transition">
-        Reservar Ahora
+      <p class="text-white text-sm mb-4">
+        Horarios: Lunes a Viernes: 9:00 - 15:00 / 19:00 - 23:00<br />
+        Sábados y Domingos: 09:00 - 17:00 / 19:00 - 00:00
+      </p>
+      <a href="/reservas" class="inline-block px-6 py-2 bg-white text-[rgb(0,119,119)] font-medium rounded hover:bg-gray-100 transition">
+        Reservar
       </a>
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-4 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Card Almuerzo -->
+    
+      <div class="flex flex-row bg-white rounded-xl shadow-md hover:shadow-lg transition transform hover:scale-105 p-2">
+        <!-- Imagen pequeña a la izquierda -->
+        <div class="w-1/3">
+          <img src="/images/img1.jpg" alt="Turno Almuerzo" class="w-full h-full object-cover rounded-l-xl border-4 border-white" />
+        </div>
+        <!-- Texto a la derecha -->
+        <div class="w-2/3 p-2 flex flex-col justify-center">
+          <h3 class="text-lg font-bold text-[rgb(0,119,119)]">Almuerzo</h3>
+          <p class="text-xs text-gray-600">
+            Menú fresco y ligero para comenzar el día con energía.
+          </p>
+          
+        </div>
+      </div>
+    
+    <!-- Card Comida -->
+    
+      <div class="flex flex-row bg-white rounded-xl shadow-md hover:shadow-lg transition transform hover:scale-105 p-2">
+        <!-- Imagen pequeña a la izquierda -->
+        <div class="w-1/3">
+          <img src="/images/img2.jpg" alt="Turno Comida" class="w-full h-full object-cover rounded-l-xl border-4 border-white" />
+        </div>
+        <!-- Texto a la derecha -->
+        <div class="w-2/3 p-2 flex flex-col justify-center">
+          <h3 class="text-lg font-bold text-[rgb(0,119,119)]">Comida</h3>
+          <p class="text-xs text-gray-600">
+            Platos destacados que combinan tradición y modernidad.
+          </p>
+      
+        </div>
+      </div>
+    
+    <!-- Card Cena -->
+    
+      <div class="flex flex-row bg-white rounded-xl shadow-md hover:shadow-lg transition transform hover:scale-105 p-2">
+        <!-- Imagen pequeña a la izquierda -->
+        <div class="w-1/3">
+          <img src="/images/img3.jpg" alt="Turno Cena" class="w-full h-full object-cover rounded-l-xl border-4 border-white" />
+        </div>
+        <!-- Texto a la derecha -->
+        <div class="w-2/3 p-2 flex flex-col justify-center">
+          <h3 class="text-lg font-bold text-[rgb(0,119,119)]">Cena</h3>
+          <p class="text-xs text-gray-600">
+            Cierra el día con una experiencia gastronómica única.
+          </p>
+    
+        </div>
+      </div>
+    
+  </div>
+</section>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Card Almuerzo -->
-      <div class="p-8 bg-white rounded-lg shadow-md transform transition duration-300 hover:scale-105">
-        <h3 class="text-center text-2xl font-bold text-[rgb(0,119,119)] mb-4">Almuerzo</h3>
-        <p class="text-center text-gray-600">
-          Disfruta de un menú fresco y lleno de sabor, con opciones ligeras y nutritivas para comenzar el día.
-        </p>
-      </div>
-      <!-- Card Comida -->
-      <div class="p-8 bg-white rounded-lg shadow-md transform transition duration-300 hover:scale-105">
-        <h3 class="text-center text-2xl font-bold text-[rgb(0,119,119)] mb-4">Comida</h3>
-        <p class="text-center text-gray-600">
-          Una experiencia gastronómica con platos que destacan lo mejor de nuestra cocina, perfecta para compartir.
-        </p>
-      </div>
-      <!-- Card Cena -->
-      <div class="p-8 bg-white rounded-lg shadow-md transform transition duration-300 hover:scale-105">
-        <h3 class="text-center text-2xl font-bold text-[rgb(0,119,119)] mb-4">Cena</h3>
-        <p class="text-center text-gray-600">
-          Ambiente sofisticado y platos exquisitos para cerrar el día con elegancia y estilo.
-        </p>
-      </div>
+<section class="max-w-7xl mx-auto px-4 py-16">
+  <div class="flex flex-col md:flex-row items-center gap-8">
+    <!-- Imagen del parque infantil -->
+    <div class="md:w-1/2">
+      <img src="/images/parque_rafol.webp" alt="Parque Infantil" class="w-full h-auto rounded-lg shadow-md object-cover" />
     </div>
-  </section> 
-    <h2 class="text-center text-3xl font-bold mb-8">Eventos Especiales</h2>
-  <p class="mt-8 text-center text-lg text-gray-700">
-    Puedes disfrutar de estos espacios con una copa o una tapita, o incluso organizar eventos inolvidables.
-  </p>
-  <section class="max-w-7xl mx-auto px-4 py-16">
- 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Card Pista de Pádel -->
-      <div class="p-8 bg-white rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex flex-col items-center">
-        <img src="/images/padel.jpg" alt="Pista de Pádel" class="w-24 h-24 mb-4 rounded-full object-cover" />
-        <h3 class="text-2xl font-bold text-[rgb(0,119,119)] mb-2">Pádel</h3>
-        <p class="text-center text-gray-600">
-          Disfruta de un partido acompañado de una copa o una tapita.
-        </p>
-      </div>
-      <!-- Card Piscina -->
-      <div class="p-8 bg-white rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex flex-col items-center">
-        <img src="/images/piscina.jpg" alt="Piscina" class="w-24 h-24 mb-4 rounded-full object-cover" />
-        <h3 class="text-2xl font-bold text-[rgb(0,119,119)] mb-2">Piscina</h3>
-        <p class="text-center text-gray-600">
-          Disfruta de refrescantes momentos y cócteles al lado del agua.
-        </p>
-      </div>
-      <!-- Card Pista de Tenis -->
-      <div class="p-8 bg-white rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex flex-col items-center">
-        <img src="/images/tenis.jpg" alt="Pista de Tenis" class="w-24 h-24 mb-4 rounded-full object-cover" />
-        <h3 class="text-2xl font-bold text-[rgb(0,119,119)] mb-2">Tenis</h3>
-        <p class="text-center text-gray-600">
-          Organiza encuentros o disfruta de un partido en un ambiente único.
-        </p>
-      </div>
+    <!-- Información de la zona infantil -->
+    <div class="md:w-1/2 text-center sm:text-start">
+      <h2 class="text-3xl font-bold mb-4">Zona Infantil</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Un espacio pensado para los más pequeños, con parque y un menú diseñado a su medida.
+      </p>
+      <a href="/zona-infantil" class="inline-block px-6 py-3 bg-[rgb(0,119,119)] text-white font-medium rounded hover:bg-[rgb(100,199,199)] transition">
+        DESCUBRE MÁS
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="w-full px-5 py-10 md:py-16 bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <div class="max-w-3xl mx-auto text-center mb-8">
+    <h2 id="eventos_especiales"  class="text-4xl md:text-5xl font-extrabold mb-4 text-[rgb(0,109,109)]">Eventos Especiales</h2>
+    <p class="text-xl italic text-gray-600">
+      Descubre nuestros espacios diseñados para brindarte experiencias inolvidables.
+    </p>
+  </div>
+
+  <!-- Grid en tres columnas con efecto Polaroid -->
+  <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {#each items as item}
+      <a href={item.href} class="block">
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition transform hover:scale-105 px-4 pt-4 pb-8">
+          <img src={item.img} alt={item.title} class="w-full h-48 object-cover rounded-lg" />
+          <p class="mt-4 text-center text-lg font-medium text-gray-800">{item.title}</p>
+            <p class="text-center text-sm text-gray-600">
+              <button type="button" class="inline-block px-4 py-2 bg-[rgb(0,109,109)] text-white font-medium rounded hover:bg-[rgb(100,199,199)] transition" on:click={() => window.location.href = item.href}>
+                Descubre más
+              </button>
+            </p>
+        </div>
+      </a>
+    {/each}
+  </div>
+
+  <!-- Pie de sección con llamada a la acción -->
+  <div class="mt-10 text-center text-gray-600 max-w-3xl mx-auto">
+    ¿Tienes dudas o quieres reservar tu espacio?&nbsp;
+    <a href="/contacto" class="font-semibold hover:underline">Contáctanos aquí</a>.
+  </div>
+</section>
+
 
 
   <section class="max-w-7xl mx-auto px-4 py-16">
