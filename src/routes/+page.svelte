@@ -47,7 +47,7 @@
         <ul class="flex space-x-6 text-white font-semibold text-sm sm:text-lg">
           <li><a href="/reservas" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Reservar</a></li>
           <li class="select-none">|</li>
-          <li><a href="/menu" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Ver Carta</a></li>
+          <li><a href="/carta" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Ver Carta</a></li>
           <li class="select-none">|</li>
           <li><a href="/contacto" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Contacto</a></li>
           <li class="select-none">|</li>
