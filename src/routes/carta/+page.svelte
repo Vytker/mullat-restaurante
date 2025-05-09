@@ -32,47 +32,47 @@
           <h3 class="text-2xl font-semibold mt-8 mb-4">Entrantes y Tapas</h3>
           <div class="space-y-2">
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Croquetas de jamón ibérico <small>(media ración / ración)</small></span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Croquetas de jamón ibérico <small>(media ración / ración)</small></span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">6,40 € / 12,80 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Montadito de bacon y queso de cabra</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Montadito de bacon y queso de cabra</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">5,00 € / 10,00 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Montadito de “figatells” (mini hamburguesa tradicional)</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Montadito de “figatells” (mini hamburguesa tradicional)</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">5,00 € / 10,00 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Montadito de lomo y huevo de codorniz</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Montadito de lomo y huevo de codorniz</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">5,40 € / 10,40 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Montadito de tortilla de patatas</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Montadito de tortilla de patatas</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">4,00 € / 8,00 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Sepia a la plancha</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Sepia a la plancha</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">12,90 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">“Escombros” (pescaditos fritos)</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">“Escombros” (pescaditos fritos)</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">5,40 € / 9,90 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Calamares a la plancha</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Calamares a la plancha</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">9,20 €</span>
             </div>
             <div class="flex items-center">
-              <span class="truncate sm:whitespace-nowrap">Alitas de pollo fritas</span>
+              <span class="whitespace-normal sm:whitespace-nowrap">Alitas de pollo fritas</span>
               <span class="flex-grow border-b border-gray-300 mx-2"></span>
               <span class="whitespace-nowrap">4,00 € / 8,00 €</span>
             </div>

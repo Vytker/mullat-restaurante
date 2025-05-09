@@ -98,7 +98,7 @@
         </p>
         <div class="text-center md:text-right">
           <a
-            href="/restaurante/"
+            href="/carta"
             class="inline-block px-6 py-3 bg-[rgb(0,119,119)] text-white font-medium rounded hover:bg-[rgb(100,199,199)] transition"
             >VER CARTA</a
           >
