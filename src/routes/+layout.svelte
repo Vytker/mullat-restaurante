@@ -3,20 +3,24 @@
 	let compact = false;
     import { page } from '$app/stores';
 
+	$: isHome = $page.url.pathname === '/';
+	$: isReservas = $page.url.pathname === '/reservas';
+	$: isContacto = $page.url.pathname === '/contacto';
+
 	function handleScroll() {
-		compact = window.scrollY > 300;           // umbral
+		compact = window.scrollY > (isHome ? 300 : 5);           // umbral
 	}
 	function handleScrollMobile() {
 		compact = window.scrollY > 50;           // umbral
 	}
-	$: isHome = $page.url.pathname === '/';
-	$: isReservas = $page.url.pathname === '/reservas';
-	$: isContacto = $page.url.pathname === '/contacto';
+	
 
 	let mobileMenuOpen = false;
   function toggleMenu() {
     mobileMenuOpen = !mobileMenuOpen;
   }
+
+  
 </script>
 
 <svelte:window on:scroll={(e) => {
@@ -36,7 +40,7 @@
 			<div class="nav-container" class:hidden={isHome || compact}>
 				<div class="nav-logo"><a href="/"><img src="/images/mullat_logo_black1.png" alt="Mullat restaurante" class="titulo_mullat relative" /></a></div>
 
-				<ul class="nav-list">
+				<ul class="nav-list font-bold ">
 					<li class:hidden={isHome && !compact} class="inline-block text-black border-b border-black transition-all duration-300 hover:border-transparent"><a href="/">Inicio</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/reservas">Reservas</a></li>
 					<li class="inline-block border-b border-black transition-all duration-300 hover:border-transparent"><a href="/carta">Carta</a></li>
@@ -147,38 +151,41 @@
 {/if}
 
 	<main><slot /></main>
+
+
+
 	<footer class="relative w-full overflow-hidden -mt-1"
 	class:bg-white={isReservas || isContacto}
 	class:bg-[#f5f5f5]={!(isReservas || isContacto)}>
   
 	<!-- Ola SVG superior -->
-	<div class="w-full h-36">
+	<div class="w-full h-24 sm:h-36">
 	  <svg
-		viewBox="0 0 1440 320"
-		class="w-full h-full"
-		preserveAspectRatio="none"
-		xmlns="http://www.w3.org/2000/svg"
-	  >
-		<defs>
-		  <linearGradient id="footerGradient" x1="0" x2="0" y1="0" y2="1">
-			<stop offset="0%" stop-color="#007777" />
-			<stop offset="100%" stop-color={isReservas || isContacto ? '#ffffff' : '#f5f5f5'} />
-		  </linearGradient>
-		</defs>
-		<path
-		  fill="url(#footerGradient)"
-		  d="M0,64L48,80C96,96,192,128,288,170.7C384,213,480,267,576,261.3C672,256,768,192,864,149.3C960,107,1056,85,1152,112C1248,139,1344,213,1392,250.7L1440,288L1440,320L0,320Z"
-		/>
-	  </svg>
+  viewBox="0 0 1440 320"
+  class="w-full h-full rotate-180 scale-x-[-1] sm:rotate-0 sm:scale-x-100"
+  preserveAspectRatio="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id="footerGradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#007777" />
+      <stop offset="100%" stop-color={isReservas || isContacto ? '#ffffff' : '#f5f5f5'} />
+    </linearGradient>
+  </defs>
+  <path
+    fill="url(#footerGradient)"
+    d="M0,64L48,80C96,96,192,128,288,170.7C384,213,480,267,576,261.3C672,256,768,192,864,149.3C960,107,1056,85,1152,112C1248,139,1344,213,1392,250.7L1440,288L1440,320L0,320Z"
+  />
+</svg>
 	</div>
   
 	<!-- Contenido del footer -->
-	<div class="relative z-10 px-4 py-10 text-center flex justify-center text-sm text-gray-800 font-medium space-y-4">
+	<div class="relative z-10 px-4  lg:py-10 text-center flex justify-center text-sm text-gray-800 font-medium space-y-4">
 	  
   
 	  <!-- Elementos típicos de un footer -->
 	  <div class="flex flex-col md:flex-row justify-arrown items-center gap-6 text-gray-600 text-sm">
-		<div class="gap-4 flex flex-col md:flex-row items-center">
+		<div class="gap-1  md:gap-4 flex flex-col md:flex-row items-center">
 			<a href="/contacto" class="hover:underline">Contacto</a>
 			<a href="/politica-privacidad" class="hover:underline">Política de privacidad</a>
 			<a href="/aviso-legal" class="hover:underline">Aviso legal</a>
@@ -198,8 +205,7 @@
 			<p>&copy; 2025 Mullat Restaurante. Todos los derechos reservados.</p>
 
 	  </div>
-  
-	  <!-- Redes sociales -->
+
 	  
 	</div>
   </footer>
@@ -239,7 +245,7 @@ footer{flex-shrink:0;text-align:center;}
 .nav.compact{
 	/* lo convertimos en fixed para poder separarlo del borde */
 	position:fixed;
-	top:1rem;                          /* ⬅️ se baja 1 rem */
+	top:1rem;                          /* se baja 1 rem */
 	left:50%;                          /* lo centramos */
 	transform:translateX(-50%);
 
@@ -291,7 +297,7 @@ footer{flex-shrink:0;text-align:center;}
 .nav-tlf{
 	flex:0 0 auto;
 	margin-left:auto;                  /* empuja a la derecha */
-	font-size:1.25rem;
+	font-size:1em;
 	background-color:rgb(0, 119, 119);
 	color: white;
 	border-radius:9999px;
