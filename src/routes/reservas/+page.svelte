@@ -16,7 +16,8 @@
     try {
       slots.set(await fetchSlots(restId, fecha));
     } catch(e) {
-      alert((e as Error).message);
+      console.error('Error fetching slots:', e);
+      slots.set([]);
     }
   }
 
@@ -97,6 +98,7 @@
         <label class="block">
           Fecha
           <input type="date" bind:value={fecha} on:change={loadSlots}
+          min={new Date().toISOString().split('T')[0]}
             class="mt-1 block w-full border rounded p-2" />
         </label>
 
@@ -107,12 +109,22 @@
             selectedHora = sel?.hora ?? '';
           }}
             class="mt-1 block w-full border rounded p-2">
-            <option value="" disabled>– selecciona –</option>
-            {#each $slots as s}
-              <option value={s.turnoId}>
-                {s.hora} ({s.plazasDisponibles} plazas)
-              </option>
-            {/each}
+            {#if $slots.length === 0}
+              <option value="" disabled selected>Turnos no disponibles</option>
+            {:else}
+              <option value="" disabled selected>– Selecciona un turno –</option>
+              {#each $slots as s}
+                {#if s.plazasDisponibles > 0}
+                  <option value={s.turnoId}>
+                    {s.hora} ({s.plazasDisponibles} plazas)
+                  </option>
+                {:else}
+                  <option value={s.turnoId} disabled>
+                    {s.hora} (Sin plazas disponibles)
+                  </option>
+                {/if}
+              {/each}
+            {/if}
           </select>
         </label>
 
